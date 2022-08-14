@@ -19,18 +19,23 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Tutu1021">
-<meta property="og:url" content="http://example.com/archives/index.html">
+    <meta name="description" content="第一章1.3.4 项目目录 build.gradle  项目全局的gradle构建脚本，通常不需要手动修改 gradle.properties  全局的gradle配置文件，这里配置的属性将会影响项目中所有的gradle编译 settings.gradle  这个文件用于指定项目中所有引入的模块。模块引入通常自动完成  1.3.5 app目录 libs  第三方jar包，放在libs目录下，会被自">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第1章">
+<meta property="og:url" content="http://example.com/2022/08/14/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%9A%84%E5%89%AF%E6%9C%AC/index.html">
 <meta property="og:site_name" content="Tutu1021">
+<meta property="og:description" content="第一章1.3.4 项目目录 build.gradle  项目全局的gradle构建脚本，通常不需要手动修改 gradle.properties  全局的gradle配置文件，这里配置的属性将会影响项目中所有的gradle编译 settings.gradle  这个文件用于指定项目中所有引入的模块。模块引入通常自动完成  1.3.5 app目录 libs  第三方jar包，放在libs目录下，会被自">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-14T12:46:25.000Z">
+<meta property="article:modified_time" content="2022-08-14T15:59:41.686Z">
 <meta property="article:author" content="Matutu">
+<meta property="article:tag" content="《第一行代码》">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Matutu&#39;s Studio</title>
+    <title>第1章 · Matutu&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -217,6 +222,8 @@
         }
     </script>
     
+        <body class="post-body">
+    
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -246,6 +253,17 @@
     </div>
     <!-- toggle banner for post layout -->
     
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Matutu&#39;s Studio.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">第1章</a>
+            </div>
+        </div>
+    
 </header>
 
         <!-- fixed footer -->
@@ -272,24 +290,79 @@
 
 
 
+    height:50vh;
+
 ">
     
     <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+                第1章
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+                
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="《第一行代码》">《第一行代码》</a>
+    
+</div>
+
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">572</span>Reading time: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2022/08/14</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -419,83 +492,76 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
-                <main class="main index-page">
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/08/14/hello-world/">
-                
-                <span class="abstract-title-text">Hello World</span>
-            </a>
-            <div class="abstract-content">
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+                <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h3 id="1-3-4-项目目录"><a href="#1-3-4-项目目录" class="headerlink" title="1.3.4 项目目录"></a>1.3.4 项目目录</h3><ul>
+<li>build.gradle<br>  项目全局的gradle构建脚本，通常不需要手动修改</li>
+<li>gradle.properties<br>  全局的gradle配置文件，这里配置的属性将会影响项目中所有的gradle编译</li>
+<li>settings.gradle<br>  这个文件用于指定项目中所有引入的模块。模块引入通常自动完成</li>
+</ul>
+<h3 id="1-3-5-app目录"><a href="#1-3-5-app目录" class="headerlink" title="1.3.5 app目录"></a>1.3.5 app目录</h3><ul>
+<li>libs<br>  第三方jar包，放在libs目录下，会被自动添加到项目的构建路径里</li>
+<li>build.gradle<br>  app模块的gradle构建脚本，这个文件中会指定很多项目构建的相关配置</li>
+<li>在AndroidManifest.xml注册过的Activity才能使用<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span><br><span class="line">&lt;manifest xmlns:android=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span><br><span class="line">    xmlns:tools=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span><br><span class="line">    <span class="keyword">package</span>=<span class="string">&quot;com.example.helloworld&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;application</span><br><span class="line">        android:allowBackup=<span class="string">&quot;true&quot;</span></span><br><span class="line">        android:dataExtractionRules=<span class="string">&quot;@xml/data_extraction_rules&quot;</span></span><br><span class="line">        android:fullBackupContent=<span class="string">&quot;@xml/backup_rules&quot;</span></span><br><span class="line">        android:icon=<span class="string">&quot;@mipmap/ic_launcher&quot;</span></span><br><span class="line">        android:label=<span class="string">&quot;@string/app_name&quot;</span></span><br><span class="line">        android:roundIcon=<span class="string">&quot;@mipmap/ic_launcher_round&quot;</span></span><br><span class="line">        android:supportsRtl=<span class="string">&quot;true&quot;</span></span><br><span class="line">        android:theme=<span class="string">&quot;@style/Theme.HelloWorld&quot;</span></span><br><span class="line">        tools:targetApi=<span class="string">&quot;31&quot;</span>&gt;</span><br><span class="line">        &lt;activity</span><br><span class="line">            android:name=<span class="string">&quot;.MainActivity&quot;</span></span><br><span class="line">            android:exported=<span class="string">&quot;true&quot;</span>&gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name=<span class="string">&quot;android.intent.action.MAIN&quot;</span> /&gt;</span><br><span class="line"></span><br><span class="line">                &lt;category android:name=<span class="string">&quot;android.intent.category.LAUNCHER&quot;</span> /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br><span class="line">    &lt;/application&gt;</span><br><span class="line">&lt;/manifest&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="1-3-6-详解build-gradle文件"><a href="#1-3-6-详解build-gradle文件" class="headerlink" title="1.3.6 详解build.gradle文件"></a>1.3.6 详解build.gradle文件</h3><p>Android Studio使用Gradle构建项目。<br>app目录下的build.gradle：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">plugins &#123;</span><br><span class="line">    id <span class="string">&#x27;com.android.application&#x27;</span> <span class="comment">//表示是一个应用程序模块</span></span><br><span class="line">    <span class="comment">//id &#x27;com.android.library&#x27; //表示是一个库模块</span></span><br><span class="line">    id <span class="string">&#x27;org.jetbrains.kotlin.android&#x27;</span> <span class="comment">//使用kotlin开发项目必须的</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">android &#123;</span><br><span class="line">    compileSdk <span class="number">32</span> <span class="comment">//指定项目的编译版本 使用哪个版本的android SDK进行编译</span></span><br><span class="line"></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId <span class="string">&quot;com.example.helloworld&quot;</span>  <span class="comment">//每个应用的唯一标志符 不会重复</span></span><br><span class="line">        minSdk <span class="number">21</span> <span class="comment">//最低兼容</span></span><br><span class="line">        targetSdk <span class="number">32</span></span><br><span class="line">        versionCode <span class="number">1</span>  <span class="comment">//项目版本号</span></span><br><span class="line">        versionName <span class="string">&quot;1.0&quot;</span></span><br><span class="line"></span><br><span class="line">        testInstrumentationRunner <span class="string">&quot;androidx.test.runner.AndroidJUnitRunner&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled <span class="literal">false</span></span><br><span class="line">            proguardFiles getDefaultProguardFile(<span class="string">&#x27;proguard-android-optimize.txt&#x27;</span>), <span class="string">&#x27;proguard-rules.pro&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    compileOptions &#123;</span><br><span class="line">        sourceCompatibility JavaVersion.VERSION_1_8</span><br><span class="line">        targetCompatibility JavaVersion.VERSION_1_8</span><br><span class="line">    &#125;</span><br><span class="line">    kotlinOptions &#123;</span><br><span class="line">        jvmTarget = <span class="string">&#x27;1.8&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line"></span><br><span class="line">    implementation <span class="string">&#x27;androidx.core:core-ktx:1.7.0&#x27;</span></span><br><span class="line">    implementation <span class="string">&#x27;androidx.appcompat:appcompat:1.3.0&#x27;</span></span><br><span class="line">    implementation <span class="string">&#x27;com.google.android.material:material:1.4.0&#x27;</span></span><br><span class="line">    implementation <span class="string">&#x27;androidx.constraintlayout:constraintlayout:2.0.4&#x27;</span></span><br><span class="line">    testImplementation <span class="string">&#x27;junit:junit:4.13.2&#x27;</span></span><br><span class="line">    androidTestImplementation <span class="string">&#x27;androidx.test.ext:junit:1.1.3&#x27;</span></span><br><span class="line">    androidTestImplementation <span class="string">&#x27;androidx.test.espresso:espresso-core:3.4.0&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-More info: Writing
-Run server1$ hexo ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/08/14">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/08/14</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+    </article>
+    <!-- license -->
     
-        
-        
-        
-        
+        <div class="license-wrapper">
+            <p>Author：<a href="http://example.com">Matutu</a>
+            <p>Link：<a href="http://example.com/2022/08/14/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%9A%84%E5%89%AF%E6%9C%AC/">http://example.com/2022/08/14/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%9A%84%E5%89%AF%E6%9C%AC/</a>
+            <p>Publish date：<a href="http://example.com/2022/08/14/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%9A%84%E5%89%AF%E6%9C%AC/">August 14th 2022, 8:46:25 pm</a>
+            <p>Update date：<a href="http://example.com/2022/08/14/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%9A%84%E5%89%AF%E6%9C%AC/">August 14th 2022, 11:59:41 pm</a>
+            <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
             
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/08/14/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%9A%84%E5%89%AF%E6%9C%AC/">
-                
-                <span class="abstract-title-text">第1章</span>
-            </a>
-            <div class="abstract-content">
-                第一章1.3.4 项目目录
-build.gradle  项目全局的gradle构建脚本，通常不需要手动修改
-gradle.properties  全局的gradle配置文件，这里配置的属性将会影响项目中所有的gradle编译
-settings.gradle  这个文件用于指定项目中所有引入的模块。模块引入通常自动完成
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2022/08/14/hello-world/" title="Hello World">
+                    <div class="nextTitle">Hello World</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
 
-1.3.5 app目录
-libs  第三方jar包，放在libs目录下，会被自动添加到项目的构建路径里
-build.gradle  app模块的gradle构建脚本，这个文件中会指定很多项目构建的相关配置
-在AndroidManifest.xml注册过的Activity才...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/08/14">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/08/14</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="《第一行代码》">《第一行代码》</a>
-    
-</div>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
     
-    <!-- paginator  -->
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
     
 </main>
 
@@ -586,6 +652,23 @@ build.gradle  app模块的gradle构建脚本，这个文件中会指定很多项
 
         </div>
         <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-4-%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.3.4 项目目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-5-app%E7%9B%AE%E5%BD%95"><span class="toc-number">1.0.2.</span> <span class="toc-text">1.3.5 app目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-6-%E8%AF%A6%E8%A7%A3build-gradle%E6%96%87%E4%BB%B6"><span class="toc-number">1.0.3.</span> <span class="toc-text">1.3.6 详解build.gradle文件</span></a></li></ol></li></ol></li></ol>
+            </div>
         
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -705,6 +788,8 @@ build.gradle  app模块的gradle构建脚本，这个文件中会指定很多项
         <!-- CNZZ -->
         
         <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
         
         <!-- mermaid -->
         
