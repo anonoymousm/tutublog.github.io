@@ -27,7 +27,7 @@
 <meta property="og:description" content="第二章2.1 kotlin简介java代码编译—&gt; .class文件  .class文件只有Java虚拟机才能识别（Android中为ART，一种移动优化版的虚拟机），这个Java虚拟机担当解释器的角色，在程序运行时将编译得到的class文件解释成计算机可识别的二进制数据后再执行。 Java虚拟机不关心.class文件是从Java编译得来的还是从Kotlin编译来的。 kotlin完全抛弃了">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-14T12:46:25.000Z">
-<meta property="article:modified_time" content="2022-08-16T16:48:48.938Z">
+<meta property="article:modified_time" content="2022-08-18T15:37:47.584Z">
 <meta property="article:author" content="Matutu">
 <meta property="article:tag" content="《第一行代码》">
 <meta name="twitter:card" content="summary">
@@ -333,7 +333,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">320</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">646</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -503,11 +503,20 @@
 <h3 id="2-5-2-kotlin的构造函数"><a href="#2-5-2-kotlin的构造函数" class="headerlink" title="2.5.2 kotlin的构造函数"></a>2.5.2 kotlin的构造函数</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="keyword">class</span> <span class="title class_">Person</span>()&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>: <span class="type">Person</span>()&#123;</span><br><span class="line">    <span class="keyword">var</span> sno = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">var</span> grade = <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>主构造函数：<br>每个类默认都有一个不带参数的主构造函数，也可以显式地给它指明参数。主构造函数的特点是没有函数体，直接定义在类名后。<br>如：<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="keyword">val</span> sno:String, <span class="keyword">val</span> grade:<span class="built_in">Int</span>):Person()&#123;&#125;</span><br></pre></td></tr></table></figure>
-因为主构造函数没有函数体，如果想在主构造函数中编写逻辑需要借助<code>init()</code><br>Java继承特性要求子类的构造函数必须调用父类的构造函数，</li>
-<li>次构造函数：</li>
+<li><p>主构造函数：<br>每个类默认都有一个不带参数的主构造函数，也可以显式地给它指明参数。主构造函数的特点是没有函数体，直接定义在类名后。<br>如：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="keyword">val</span> sno:String, <span class="keyword">val</span> grade:<span class="built_in">Int</span>):Person()&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>因为主构造函数没有函数体，如果想在主构造函数中编写逻辑需要借助<code>init()</code><br>Java继承特性要求子类的构造函数必须调用父类的构造函数，kotlin同样遵守此规则。在kotlin中，子类的主构造方法调用父类的哪个构造函数，在继承的时候通过括号来指定。上面代码中Person后空的括号表示Student类的主构造方法在初始化的时候会调用Person类的无参数构造函数，即使在没有参数的情况下，这对括号也不能省略。</p>
+</li>
+<li><p>次构造函数：（基本用不到）<br>kotlin中当一个类既有主构造函数又有次构造函数时，所有的次构造函数都必须调用主构造函数（间接调用也行）。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="keyword">val</span> sno:Stirng,<span class="keyword">val</span> grade: <span class="built_in">Int</span>,name:String,age:<span class="built_in">Int</span>):Person(name,age)&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name:String,age:<span class="built_in">Int</span>):<span class="keyword">this</span>(<span class="string">&quot;&quot;</span>,<span class="number">0</span>,name,age)&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">constructor</span>():<span class="keyword">this</span>(<span class="string">&quot;&quot;</span>,<span class="number">0</span>)&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>次构造函数是通过<code>constructor</code>关键词来定义的。第一个次构造函数接受name和age参数，然后通过<code>this</code>关键字调用了主构造函数。</p>
+</li>
 </ul>
-
+<h3 id="2-5-3-接口"><a href="#2-5-3-接口" class="headerlink" title="2.5.3 接口"></a>2.5.3 接口</h3><ul>
+<li>可以在接口中定义一系列抽象行为，然后让具体的类去实现。</li>
+<li>可见性关键字：<br>Java:public private protected（当前类，子类，同一包路径下的类可见） default(什么都不写，默认)<br>Kotlin: public(默认) private protected（当前类，子类可见） internal（新增，模块内部可见）</li>
+</ul>
+<h3 id="2-5-4-单例类"><a href="#2-5-4-单例类" class="headerlink" title="2.5.4 单例类"></a>2.5.4 单例类</h3>
     </article>
     <!-- license -->
     
@@ -515,7 +524,7 @@
             <p>Author：<a href="https://anonoymousm.github.io/tutublog.github.io">Matutu</a>
             <p>Link：<a href="https://anonoymousm.github.io/tutublog.github.io/2022/08/14/%E7%AC%AC%E4%BA%8C%E7%AB%A0/">https://anonoymousm.github.io/tutublog.github.io/2022/08/14/%E7%AC%AC%E4%BA%8C%E7%AB%A0/</a>
             <p>Publish date：<a href="https://anonoymousm.github.io/tutublog.github.io/2022/08/14/%E7%AC%AC%E4%BA%8C%E7%AB%A0/">August 14th 2022, 8:46:25 pm</a>
-            <p>Update date：<a href="https://anonoymousm.github.io/tutublog.github.io/2022/08/14/%E7%AC%AC%E4%BA%8C%E7%AB%A0/">August 17th 2022, 12:48:48 am</a>
+            <p>Update date：<a href="https://anonoymousm.github.io/tutublog.github.io/2022/08/14/%E7%AC%AC%E4%BA%8C%E7%AB%A0/">August 18th 2022, 11:37:47 pm</a>
             <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -668,7 +677,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-kotlin%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 kotlin简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-kotlin%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">2.5.2 kotlin的构造函数</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-kotlin%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 kotlin简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-kotlin%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">2.5.2 kotlin的构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-3-%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.5.3 接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-4-%E5%8D%95%E4%BE%8B%E7%B1%BB"><span class="toc-number">1.1.3.</span> <span class="toc-text">2.5.4 单例类</span></a></li></ol></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
@@ -707,7 +716,14 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
         
         
         
@@ -722,7 +738,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 6
         </div>
         <!-- search  -->
         
@@ -766,6 +782,12 @@
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/18</span>
+            <a class="archive-post-title" href="/tutublog.github.io/2022/08/18/%E7%AC%AC%E4%B8%89%E7%AB%A0/">第3章 Activity</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">08/14</span>
